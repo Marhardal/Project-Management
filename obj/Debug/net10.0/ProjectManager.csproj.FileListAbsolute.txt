@@ -207,10 +207,11 @@ C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\staticwebasse
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\ProjectM.8307BD89.Up2Date
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\ProjectManager.dll
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\refint\ProjectManager.dll
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\ProjectManager.pdb
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\ProjectManager.genruntimeconfig.cache
 C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\ref\ProjectManager.dll
+C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\ProjectManager.sourcelink.json
+C:\Users\user\source\repos\Martin\ProjectManager\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

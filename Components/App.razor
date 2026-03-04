@@ -7,7 +7,8 @@
     <base href="/" />
     <ResourcePreloader />
     <link rel="stylesheet" href="@Assets["lib/bootstrap/dist/css/bootstrap.min.css"]" />
-    <link rel="stylesheet" href="@Assets["app.css"]" />
+    @* <link rel="stylesheet" href="@Assets["app.css"]" /> *@
+    <link rel="stylesheet" href="@Assets["Style.css"]" />
     <link rel="stylesheet" href="@Assets["ProjectManager.styles.css"]" />
     <ImportMap />
     <link rel="icon" type="image/png" href="favicon.png" />
@@ -18,7 +19,11 @@
     <Routes />
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
+    <script src="@Assets["Menu.js"]"></script>
+    <script src="@Assets["lib/bootstrap/dist/js/bootstrap.js"]"></script>
+
     <script src="@Assets["Components/Account/Shared/PasskeySubmit.razor.js"]" type="module"></script>
+    @* <link rel="stylesheet" href="@Assets["Menu.css"]" /> *@
 </body>
 
 </html>

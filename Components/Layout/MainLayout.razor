@@ -28,54 +28,7 @@
 
 <AuthorizeView>
     <Authorized>
-<div class="bottom-0 mb-3 dropdown position-fixed end-0 me-3 bd-mode-toggle">
-    <button class="py-2 btn btn-bd-primary dropdown-toggle d-flex align-items-center show" id="bd-theme" type="button"
-            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (light)">
-        <svg class="my-1 bi theme-icon-active" aria-hidden="false">
-            <use href="#sun-fill"></use>
-        </svg> <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="shadow dropdown-menu dropdown-menu-end show" aria-labelledby="bd-theme-text"
-        style="position: absolute; inset: auto 0px 0px auto; margin: 0px; transform: translate3d(-0.5px, -43px, 0px);"
-        data-popper-placement="top-end">
-        <li>
-            <button type="button" class="dropdown-item d-flex align-items-center active"
-                    data-bs-theme-value="light" aria-pressed="true">
-                <svg class="opacity-50 bi me-2" aria-hidden="true">
-                    <use href="#sun-fill"></use>
-                </svg>
-                Light
-                <svg class="bi ms-auto d-none" aria-hidden="true">
-                    <use href="#check2"></use>
-                </svg>
-            </button>
-        </li>
-        <li>
-            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-                    aria-pressed="false">
-                <svg class="opacity-50 bi me-2" aria-hidden="true">
-                    <use href="#moon-stars-fill"></use>
-                </svg>
-                Dark
-                <svg class="bi ms-auto d-none" aria-hidden="true">
-                    <use href="#check2"></use>
-                </svg>
-            </button>
-        </li>
-        <li>
-            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto"
-                    aria-pressed="false">
-                <svg class="opacity-50 bi me-2" aria-hidden="true">
-                    <use href="#circle-half"></use>
-                </svg>
-                Auto
-                <svg class="bi ms-auto d-none" aria-hidden="true">
-                    <use href="#check2"></use>
-                </svg>
-            </button>
-        </li>
-    </ul>
-</div>
+
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="calendar3" viewBox="0 0 16 16">
         <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z">
@@ -172,11 +125,15 @@
 </header>
 <div class="container-fluid">
     <div class="row">
-            <div class="p-0 sidebar col-md-3 col-lg-2 bg-body-tertiary">
-<NavMenu/>
+            <div class="p-0 sidebar col-md-3 col-lg-2 bg-body-tertiary d-flex flex-column">
+                <NavMenu/>
+               
             </div>
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-body-secondary">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-body-secondary d-flex flex-column" style="min-height: 92vh;">
                     @Body 
+                    <div class="p-3 mt-auto text-center text-muted border-top">
+                        <small>&copy; @DateTime.Now.Year MEPA</small>
+                    </div>
                     
         </main>
     </div>

@@ -22,11 +22,22 @@
     <div class="col-md-5">
         <div class="input-group mb-3">
   <span class="input-group-text" id="basic-addon1">Search</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
 </div>
     </div>
-    <div class="col-md-2 text-end">
-        <button type="button" class="btn btn-primary btn-sm">Add Project</button>
+    <div class="col-md-1">
+        <div class="dropdown-center">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Export
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">PDF</a></li>
+                <li><a class="dropdown-item" href="#">Excel</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-1 text-end">
+        <button type="button" class="btn btn-primary"><span class="pr-2"><i class="bi bi-plus-square"></i></span>Add</button>
     </div>
 </div>
 

@@ -2,9 +2,9 @@
 
 @inject NavigationManager NavigationManager
 
-<div class="top-row ps-3 navbar navbar-dark">
+@* <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">ProjectManager</a>
+        <NavLink class="navbar-brand" href="">ProjectManager</NavLink>
     </div>
 </div>
 
@@ -12,25 +12,25 @@
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="nav flex-column">
-        <div class="nav-item px-3">
+        <div class="px-3 nav-item">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
             </NavLink>
         </div>
 
-        <div class="nav-item px-3">
+        <div class="px-3 nav-item">
             <NavLink class="nav-link" href="counter">
                 <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
             </NavLink>
         </div>
 
-        <div class="nav-item px-3">
+        <div class="px-3 nav-item">
             <NavLink class="nav-link" href="weather">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
             </NavLink>
         </div>
 
-        <div class="nav-item px-3">
+        <div class="px-3 nav-item">
             <NavLink class="nav-link" href="auth">
                 <span class="bi bi-lock-nav-menu" aria-hidden="true"></span> Auth Required
             </NavLink>
@@ -38,12 +38,12 @@
 
         <AuthorizeView>
             <Authorized>
-                <div class="nav-item px-3">
+                <div class="px-3 nav-item">
                     <NavLink class="nav-link" href="Account/Manage">
                         <span class="bi bi-person-fill-nav-menu" aria-hidden="true"></span> @context.User.Identity?.Name
                     </NavLink>
                 </div>
-                <div class="nav-item px-3">
+                <div class="px-3 nav-item">
                     <form action="Account/Logout" method="post">
                         <AntiforgeryToken />
                         <input type="hidden" name="ReturnUrl" value="@currentUrl" />
@@ -54,12 +54,12 @@
                 </div>
             </Authorized>
             <NotAuthorized>
-                <div class="nav-item px-3">
+                <div class="px-3 nav-item">
                     <NavLink class="nav-link" href="Account/Register">
                         <span class="bi bi-person-nav-menu" aria-hidden="true"></span> Register
                     </NavLink>
                 </div>
-                <div class="nav-item px-3">
+                <div class="px-3 nav-item">
                     <NavLink class="nav-link" href="Account/Login">
                         <span class="bi bi-person-badge-nav-menu" aria-hidden="true"></span> Login
                     </NavLink>
@@ -67,8 +67,135 @@
             </NotAuthorized>
         </AuthorizeView>
     </nav>
-</div>
+</div> *@
 
+<AuthorizeView>
+<div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
+     aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebarMenuLabel">MEPA</h5> <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+    </div>
+    <div class="p-0 overflow-y-auto offcanvas-body d-md-flex flex-column pt-lg-3">
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <NavLink class="gap-2 nav-link d-flex align-items-center active" aria-current="page" href="/">
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#house-fill"></use>
+                        </svg>
+                        Dashboard
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Propenents">
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#file-earmark"></use>
+                        </svg>
+                        Proponent
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Projects">
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                        Projects
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Users">
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#people"></use>
+                        </svg>
+                        Users
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Tracking">
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#graph-up"></use>
+                        </svg>
+                        Tracking
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Roles">
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#puzzle"></use>
+                        </svg>
+                        Roles
+                    </NavLink>
+                </li>
+            </ul>
+        @*     <h6
+                class="px-3 mt-4 mb-1 sidebar-heading d-flex justify-content-between align-items-center text-body-secondary text-uppercase">
+                <span>Saved reports</span> 
+                <NavLink class="link-secondary" href="#" aria-label="Add NavLink new report">
+                <svg class="bi" aria-hidden="true">
+                    <use xlink:href="#plus-circle"></use>
+                </svg>
+            </NavLink>
+        </h6> *@
+        @* <ul class="mb-auto nav flex-column">
+            <li class="nav-item">
+                <NavLink class="gap-2 nav-link d-flex align-items-center" href="#">
+                    <svg class="bi" aria-hidden="true">
+                        <use xlink:href="#file-earmark-text"></use>
+                    </svg>
+                    Current month
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="gap-2 nav-link d-flex align-items-center" href="#">
+                    <svg class="bi" aria-hidden="true">
+                        <use xlink:href="#file-earmark-text"></use>
+                    </svg>
+                    Last quarter
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="gap-2 nav-link d-flex align-items-center" href="#">
+                    <svg class="bi" aria-hidden="true">
+                        <use xlink:href="#file-earmark-text"></use>
+                    </svg>
+                    Social engagement
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="gap-2 nav-link d-flex align-items-center" href="#">
+                    <svg class="bi" aria-hidden="true">
+                        <use xlink:href="#file-earmark-text"></use>
+                    </svg>
+                    Year-end sale
+                </NavLink>
+            </li>
+        </ul> *@
+        <hr class="my-3">
+        <ul class="mt-auto nav flex-column">
+            <li class="nav-item">
+                    <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Settings">
+                    <svg class="bi" aria-hidden="true">
+                        <use xlink:href="#gear-wide-connected"></use>
+                    </svg>
+                    Settings
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <form action="Account/Logout" method="post">
+                    <AntiforgeryToken />
+                    <input type="hidden" name="ReturnUrl" value="@currentUrl" />
+                    <button type="submit" class="gap-2 nav-link d-flex align-items-center">
+                        <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#door-closed"></use>
+                        </svg>
+                        Logout
+                    </button>
+                </form>
+            </li>
+        </ul>
+</div>
+    </div>
+</AuthorizeView>
 @code {
     private string? currentUrl;
 
@@ -89,4 +216,3 @@
         NavigationManager.LocationChanged -= OnLocationChanged;
     }
 }
-

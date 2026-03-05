@@ -1,0 +1,100 @@
+﻿@page "/Projects"
+
+
+<PageTitle>MEPA | Projects</PageTitle>
+
+<div class="row my-4">
+    <div class="col-md-3">
+        <h3>Projects</h3>
+    </div>
+    <div class="col-md-2">
+        <div class="input-group mb-3 rounded-pill">
+  <span class="input-group-text" id="basic-addon1">Show</span>
+            <select class="form-control-sm" aria-label="Username" aria-describedby="basic-addon1">
+                <option>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+                <option>50</option>
+            </select>
+</div>
+    </div>
+    <div class="col-md-5">
+        <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Search</span>
+  <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+    </div>
+    <div class="col-md-1">
+        <div class="dropdown-center">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Export
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">PDF</a></li>
+                <li><a class="dropdown-item" href="#">Excel</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-1 text-end">
+        <button type="button" class="btn btn-primary"><span class="pr-2"><i class="bi bi-plus-square"></i></span>Add</button>
+    </div>
+</div>
+
+<div class="border rounded bg-body-tertiary">
+    <table class="table rounded-pill table-hover p-2 mt-2">
+        <thead class="bg-dark text-white">
+            <tr class="">
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Location</th>
+                <th scope="col">Submission Date</th>
+                <th scope="col">Created On</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="justify-content-center d-flex">
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                    <a class="page-link" href="#" aria-current="page">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+@code {
+
+}

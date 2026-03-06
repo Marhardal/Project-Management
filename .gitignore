@@ -5,6 +5,9 @@
 /.vs
 /.Data/Migrations
 /Migrations
-bin/
-obj/
+/bin/
+/bin/Debug
+/bin/Debug/net10.0
+/obj/
+/obj/Debug
 

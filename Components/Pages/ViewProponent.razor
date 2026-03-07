@@ -1,224 +1,403 @@
 ﻿@page "/Proponent/View"
 
-<PageTitle>MEPA | Proponent</PageTitle>
+<PageTitle>MEPA | Proponent Details</PageTitle>
 
-<div class="my-2 row">
-    <div class="col-md-5">
-        <h3>Proponent Details</h3>
-    </div>
-    </div>
-<div class="mb-2 row">
-    <div class="my-4 col-6">
-        <div class="row">
-            <span class="col-4">Name</span>
-            <span class="col-8">Name</span>
-        </div>
-    </div>
-    <div class="my-4 col-6 border-start border-2">
-        <div class="row">
-            <span class="col-4">Location</span>
-            <span class="col-8">Name</span>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="row">
-            <span class="col-4">Postal Address</span>
-            <span class="col-8">Name</span>
-        </div>
-    </div>
-</div>
 
-<div class="my-4 row">
-    <div class="col-md-5">
-        <h3>Contact Details</h3>
-    </div>
-    <div class="col-md-5">
-        <div class="mb-3 input-group">
-            <span class="input-group-text" id="basic-addon1">Search</span>
-            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-    </div>
-    <div class="col-md-1">
-        <div class="dropdown-center">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Export
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">PDF</a></li>
-                <li><a class="dropdown-item" href="#">Excel</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-1 text-end">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-plus-square me-1"></i>Add</button>
-    </div>
-</div>
 
-<div class="border rounded bg-body-tertiary">
-    <table class="table p-2 mt-2 rounded-pill table-hover">
-        <thead class="text-white bg-dark">
-            <tr class="">
-                <th scope="col">#</th>
-                <th scope="col">Full Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Created On</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td class="py-2">
-                    John Doe
-                </td>
-                <td class="py-2">jdoe@gmail.com</td>
-                <td class="py-2">1234567890</td>
-                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
-                <td class="py-2">
-                    <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-success">
-                                <i class="bi bi-pencil-square"></i>
-                            </NavLink>
-                        </div>
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-danger">
-                                <i class="bi bi-trash"></i>
-                            </NavLink>
-                        </div>
+<div class="container-fluid">
+    <div class="my-2 row">
+        <div class="col-md-5">
+            <h3>Proponent Details</h3>
+        </div>
+    </div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="details-tab" data-bs-toggle="tab" data-bs-target="#details-tab-pane" type="button" role="tab" aria-controls="details-tab-pane" aria-selected="true">Details</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">Projects</button>
+        </li>
+        @* <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+        </li> *@
+    </ul>
+    <div class="tab-content bg-light rounded-bottom border-start border border-bottom px-2 mt--1" id="myTabContent">
+        <div class="tab-pane fade show active " id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
+            <div class="mb-2 row">
+                <div class="my-4 col-6">
+                    <div class="row">
+                        <span class="col-4">Name</span>
+                        <span class="col-8">Name</span>
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td class="py-2">
-                    John Doe
-                </td>
-                <td class="py-2">jdoe@gmail.com</td>
-                <td class="py-2">1234567890</td>
-                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
-                <td class="py-2">
-                    <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-success">
-                                <i class="bi bi-pencil-square"></i>
-                            </NavLink>
-                        </div>
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-danger">
-                                <i class="bi bi-trash"></i>
-                            </NavLink>
-                        </div>
+                </div>
+                <div class="my-4 col-6 border-start border-2">
+                    <div class="row">
+                        <span class="col-4">Location</span>
+                        <span class="col-8">Name</span>
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td class="py-2">
-                    John Doe
-                </td>
-                <td class="py-2">jdoe@gmail.com</td>
-                <td class="py-2">1234567890</td>
-                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
-                <td class="py-2">
-                    <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-success">
-                                <i class="bi bi-pencil-square"></i>
-                            </NavLink>
-                        </div>
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-danger">
-                                <i class="bi bi-trash"></i>
-                            </NavLink>
-                        </div>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <span class="col-4">Postal Address</span>
+                        <span class="col-8">Name</span>
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td class="py-2">
-                    John Doe
-                </td>
-                <td class="py-2">jdoe@gmail.com</td>
-                <td class="py-2">1234567890</td>
-                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
-                <td class="py-2">
-                    <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-success">
-                                <i class="bi bi-pencil-square"></i>
-                            </NavLink>
-                        </div>
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-danger">
-                                <i class="bi bi-trash"></i>
-                            </NavLink>
-                        </div>
+                </div>
+            </div>
+
+            <div class="my-4 row">
+                <div class="col-md-5">
+                    <h3>Contact Details</h3>
+                </div>
+                <div class="col-md-5">
+                    <div class="mb-3 input-group">
+                        <span class="input-group-text" id="basic-addon1">Search</span>
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td class="py-2">
-                    John Doe
-                </td>
-                <td class="py-2">jdoe@gmail.com</td>
-                <td class="py-2">1234567890</td>
-                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
-                <td class="py-2">
-                    <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-success">
-                                <i class="bi bi-pencil-square"></i>
-                            </NavLink>
-                        </div>
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-danger">
-                                <i class="bi bi-trash"></i>
-                            </NavLink>
-                        </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="dropdown-center">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Export
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">PDF</a></li>
+                            <li><a class="dropdown-item" href="#">Excel</a></li>
+                        </ul>
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td class="py-2">
-                    John Doe
-                </td>
-                <td class="py-2">jdoe@gmail.com</td>
-                <td class="py-2">1234567890</td>
-                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
-                <td class="py-2">
-                    <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-success">
-                                <i class="bi bi-pencil-square"></i>
-                            </NavLink>
-                        </div>
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-danger">
-                                <i class="bi bi-trash"></i>
-                            </NavLink>
-                        </div>
+                </div>
+                <div class="col-md-1 text-end">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-plus-square"></i>Add</button>
+                </div>
+            </div>
+
+            <div class="border rounded bg-body-tertiary my-2">
+                <table class="table p-2 mt-2 rounded-pill table-hover">
+                    <thead class="text-white bg-dark">
+                        <tr class="">
+                            <th scope="col">#</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Created On</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="py-2">
+                                John Doe
+                            </td>
+                            <td class="py-2">jdoe@gmail.com</td>
+                            <td class="py-2">1234567890</td>
+                            <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                            <td class="py-2">
+                                <div class="flex-row d-flex">
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="py-2">
+                                John Doe
+                            </td>
+                            <td class="py-2">jdoe@gmail.com</td>
+                            <td class="py-2">1234567890</td>
+                            <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                            <td class="py-2">
+                                <div class="flex-row d-flex">
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="py-2">
+                                John Doe
+                            </td>
+                            <td class="py-2">jdoe@gmail.com</td>
+                            <td class="py-2">1234567890</td>
+                            <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                            <td class="py-2">
+                                <div class="flex-row d-flex">
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="py-2">
+                                John Doe
+                            </td>
+                            <td class="py-2">jdoe@gmail.com</td>
+                            <td class="py-2">1234567890</td>
+                            <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                            <td class="py-2">
+                                <div class="flex-row d-flex">
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="py-2">
+                                John Doe
+                            </td>
+                            <td class="py-2">jdoe@gmail.com</td>
+                            <td class="py-2">1234567890</td>
+                            <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                            <td class="py-2">
+                                <div class="flex-row d-flex">
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="py-2">
+                                John Doe
+                            </td>
+                            <td class="py-2">jdoe@gmail.com</td>
+                            <td class="py-2">1234567890</td>
+                            <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                            <td class="py-2">
+                                <div class="flex-row d-flex">
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="justify-content-center d-flex">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#" aria-current="page">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="projects-tab-pane" role="tabpanel" aria-labelledby="projects-tab" tabindex="0">
+            <div class="my-4 row">
+                <div class="col-md-3">
+                    <h3>Proponent Projects</h3>
+                </div>
+                <div class="col-md-2">
+                    <div class="mb-3 input-group rounded-pill">
+                        <span class="input-group-text" id="basic-addon1">Show</span>
+                        <select class="form-control-sm" aria-label="Username" aria-describedby="basic-addon1">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>30</option>
+                            <option>40</option>
+                            <option>50</option>
+                        </select>
                     </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="justify-content-center d-flex">
-        <nav aria-label="...">
-            <ul class="pagination">
-                <li class="page-item"><a href="#" class="page-link">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active">
-                    <a class="page-link" href="#" aria-current="page">2</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav>
+                </div>
+                <div class="col-md-5">
+                    <div class="mb-3 input-group">
+                        <span class="input-group-text" id="basic-addon1">Search</span>
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="dropdown-center text-end">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Export
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">PDF</a></li>
+                            <li><a class="dropdown-item" href="#">Excel</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border rounded bg-body-tertiary my-2">
+                <table class="table p-2 mt-2 rounded-pill table-hover">
+                    <thead class="text-white bg-dark">
+                        <tr class="">
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Proponent</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Submission</th>
+                            <th scope="col">Created On</th>
+                            <th scope="col" class="justify-content-center text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="py-2">
+                                @TruncateToWords("Revised ESMP for Dumisan Borrow Pit in Kasungu District", 6)
+                            </td>
+                            <td class="py-2">Kasungu</td>
+                            <td class="py-2">Mota-Engil</td>
+                            <td class="py-2">2025-08-05</td>
+                            <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                            <td class="py-2">
+                                <div class="flex-row d-flex justify-content-center">
+                                    <div class="p-1 jud">
+                                        <NavLink class="p-2 text-white rounded bg-warning">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </NavLink>
+                                    </div>
+                                    @* <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div> *@
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>
+                                @TruncateToWords("Revised ESMP for the proposed Kasitu Area exploration of Niobium,Tantalum, Uranium and Zircon T/A Kampingo Sibande in Mzuzu District", 6)
+                            </td>
+                            <td>Mzuzu</td>
+                            <td>MMC Limited</td>
+                            <td>2025-08-05</td>
+                            <td>@DateTime.Now.AddMonths(-2)</td>
+                            <td>
+                                <div class="flex-row d-flex">
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-warning">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>
+                                @TruncateToWords("Revised ESMP for gold and heavy mineral sands in T/A Katunga, Chikwawa", 6)
+                            </td>
+                            <td>Chikwawa</td>
+                            <td>HDL Mining LTD </td>
+                            <td>2025-08-05</td>
+                            <td>@DateTime.Now.AddMonths(-3)</td>
+                            <td>
+                                <div class="flex-row d-flex">
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-warning" href="/Projects/View">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-success">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </NavLink>
+                                    </div>
+                                    <div class="p-1">
+                                        <NavLink class="p-2 text-white rounded bg-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="justify-content-center d-flex">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#" aria-current="page">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+        @* <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div> *@
     </div>
 </div>
 

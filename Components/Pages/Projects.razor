@@ -3,12 +3,12 @@
 
 <PageTitle>MEPA | Projects</PageTitle>
 
-<div class="row my-4">
+<div class="my-4 row">
     <div class="col-md-3">
         <h3>Projects</h3>
     </div>
     <div class="col-md-2">
-        <div class="input-group mb-3 rounded-pill">
+        <div class="mb-3 input-group rounded-pill">
   <span class="input-group-text" id="basic-addon1">Show</span>
             <select class="form-control-sm" aria-label="Username" aria-describedby="basic-addon1">
                 <option>10</option>
@@ -20,7 +20,7 @@
 </div>
     </div>
     <div class="col-md-5">
-        <div class="input-group mb-3">
+        <div class="mb-3 input-group">
   <span class="input-group-text" id="basic-addon1">Search</span>
   <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
 </div>
@@ -42,8 +42,8 @@
 </div>
 
 <div class="border rounded bg-body-tertiary">
-    <table class="table rounded-pill table-hover p-2 mt-2">
-        <thead class="bg-dark text-white">
+    <table class="table p-2 mt-2 rounded-pill table-hover">
+        <thead class="text-white bg-dark">
             <tr class="">
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
@@ -57,27 +57,27 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td>
-                    Revised ESMP for Dumisan Borrow Pit in Kasungu District
+                <td class="py-2">
+                    @TruncateToWords("Revised ESMP for Dumisan Borrow Pit in Kasungu District", 6)
                 </td>
-                <td>Kasungu</td>
-                <td>Mota-Engil</td>
-                <td>2025-08-05</td>
-                <td>@DateTime.Now.AddMonths(-1)</td>
-                <td>
-                    <div class="d-flex flex-row mb-3">
+                <td class="py-2">Kasungu</td>
+                <td class="py-2">Mota-Engil</td>
+                <td class="py-2">2025-08-05</td>
+                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                <td class="py-2">
+                    <div class="flex-row mb-3 d-flex">
                         <div class="p-1">
-                            <NavLink class="p-2 bg-warning text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-warning">
                                 <i class="bi bi-eye-fill"></i>
                             </NavLink>
                         </div>
                         <div class="p-1">
-                            <NavLink class="p-2 bg-success text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-success">
                                 <i class="bi bi-pencil-square"></i>
                             </NavLink>
                         </div>
                         <div class="p-1">
-                            <NavLink class="p-2 bg-danger text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-danger">
                             <i class="bi bi-trash"></i>
                             </NavLink>
                         </div>
@@ -87,26 +87,26 @@
             <tr>
                 <th scope="row">2</th>
                 <td>
-                    Revised ESMP for the proposed Kasitu Area exploration of Niobium,Tantalum, Uranium and Zircon T/A Kampingo Sibande in Mzuzu District
+                    @TruncateToWords("Revised ESMP for the proposed Kasitu Area exploration of Niobium,Tantalum, Uranium and Zircon T/A Kampingo Sibande in Mzuzu District", 6)
                 </td>
                 <td>Mzuzu</td>
                 <td>MMC Limited</td>
                 <td>2025-08-05</td>
                 <td>@DateTime.Now.AddMonths(-2)</td>
                 <td>
-                    <div class="d-flex flex-row mb-3">
+                    <div class="flex-row mb-3 d-flex">
                         <div class="p-1">
-                            <NavLink class="p-2 bg-warning text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-warning">
                                 <i class="bi bi-eye-fill"></i>
                             </NavLink>
                         </div>
                         <div class="p-1">
-                            <NavLink class="p-2 bg-success text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-success">
                                 <i class="bi bi-pencil-square"></i>
                             </NavLink>
                         </div>
                         <div class="p-1">
-                            <NavLink class="p-2 bg-danger text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-danger">
                                 <i class="bi bi-trash"></i>
                             </NavLink>
                         </div>
@@ -116,26 +116,26 @@
             <tr>
                 <th scope="row">3</th>
                 <td>
-                    Revised ESMP for gold and heavy mineral sands in T/A Katunga, Chikwawa
+                    @TruncateToWords("Revised ESMP for gold and heavy mineral sands in T/A Katunga, Chikwawa", 6)
                 </td>
                 <td>Chikwawa</td>
                 <td>HDL Mining LTD </td>
                 <td>2025-08-05</td>
                 <td>@DateTime.Now.AddMonths(-3)</td>
                 <td>
-                    <div class="d-flex flex-row mb-3">
+                    <div class="flex-row mb-3 d-flex">
                         <div class="p-1">
-                            <NavLink class="p-2 bg-warning text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-warning" href="/Projects/View">
                                 <i class="bi bi-eye-fill"></i>
                             </NavLink>
                         </div>
                         <div class="p-1">
-                            <NavLink class="p-2 bg-success text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-success">
                                 <i class="bi bi-pencil-square"></i>
                             </NavLink>
                         </div>
                         <div class="p-1">
-                            <NavLink class="p-2 bg-danger text-white rounded">
+                            <NavLink class="p-2 text-white rounded bg-danger">
                                 <i class="bi bi-trash"></i>
                             </NavLink>
                         </div>
@@ -198,5 +198,13 @@
 </div>
 
 @code {
-
+    private string TruncateToWords(string text, int wordLimit)
+    {
+        if (string.IsNullOrEmpty(text)) return text;
+        
+        var words = text.Split(' ');
+        if (words.Length <= wordLimit) return text;
+        
+        return string.Join(" ", words.Take(wordLimit)) + "...";
+    }
 }

@@ -1,22 +1,36 @@
-﻿@page "/Proponents"
+﻿@page "/Proponent/View"
 
-<PageTitle>MEPA | Proponents</PageTitle>
+<PageTitle>MEPA | Proponent</PageTitle>
+
+<div class="my-2 row">
+    <div class="col-md-5">
+        <h3>Proponent Details</h3>
+    </div>
+    </div>
+<div class="mb-2 row">
+    <div class="my-4 col-6">
+        <div class="row">
+            <span class="col-4">Name</span>
+            <span class="col-8">Name</span>
+        </div>
+    </div>
+    <div class="my-4 col-6 border-start border-2">
+        <div class="row">
+            <span class="col-4">Location</span>
+            <span class="col-8">Name</span>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="row">
+            <span class="col-4">Postal Address</span>
+            <span class="col-8">Name</span>
+        </div>
+    </div>
+</div>
 
 <div class="my-4 row">
-    <div class="col-md-3">
-        <h3>Proponents</h3>
-    </div>
-    <div class="col-md-2">
-        <div class="mb-3 input-group rounded-pill">
-            <span class="input-group-text" id="basic-addon1">Show</span>
-            <select class="form-control-sm" aria-label="Username" aria-describedby="basic-addon1">
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-            </select>
-        </div>
+    <div class="col-md-5">
+        <h3>Contact Details</h3>
     </div>
     <div class="col-md-5">
         <div class="mb-3 input-group">
@@ -45,9 +59,9 @@
         <thead class="text-white bg-dark">
             <tr class="">
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Postal Address</th>
-                <th scope="col">Location</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
                 <th scope="col">Created On</th>
                 <th scope="col">Action</th>
             </tr>
@@ -56,18 +70,13 @@
             <tr>
                 <th scope="row">1</th>
                 <td class="py-2">
-                    Mota-Engil
+                    John Doe
                 </td>
-                <td class="py-2">P.O. Box 12</td>
-                <td class="py-2">Kasungu</td>
+                <td class="py-2">jdoe@gmail.com</td>
+                <td class="py-2">1234567890</td>
                 <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
                 <td class="py-2">
                     <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-warning" href="Proponent/View">
-                                <i class="bi bi-eye-fill"></i>
-                            </NavLink>
-                        </div>
                         <div class="p-1">
                             <NavLink class="p-2 text-white rounded bg-success">
                                 <i class="bi bi-pencil-square"></i>
@@ -83,17 +92,14 @@
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td class="py-2">MMC Limited</td>
-                <td class="py-2">P.O. Box 12</td>
-                <td class="py-2">Lilongwe</td>
+                <td class="py-2">
+                    John Doe
+                </td>
+                <td class="py-2">jdoe@gmail.com</td>
+                <td class="py-2">1234567890</td>
                 <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
                 <td class="py-2">
                     <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-warning">
-                                <i class="bi bi-eye-fill"></i>
-                            </NavLink>
-                        </div>
                         <div class="p-1">
                             <NavLink class="p-2 text-white rounded bg-success">
                                 <i class="bi bi-pencil-square"></i>
@@ -109,17 +115,14 @@
             </tr>
             <tr>
                 <th scope="row">3</th>
-                <td class="py-2">Escom</td>
-                <td class="py-2">P.O. Box 12</td>
-                <td class="py-2">Lilongwe</td>
+                <td class="py-2">
+                    John Doe
+                </td>
+                <td class="py-2">jdoe@gmail.com</td>
+                <td class="py-2">1234567890</td>
                 <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
                 <td class="py-2">
                     <div class="flex-row d-flex">
-                        <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-warning">
-                                <i class="bi bi-eye-fill"></i>
-                            </NavLink>
-                        </div>
                         <div class="p-1">
                             <NavLink class="p-2 text-white rounded bg-success">
                                 <i class="bi bi-pencil-square"></i>
@@ -134,18 +137,61 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">4</th>
-                <td class="py-2">Gwabala Mining LTD</td>
-                <td class="py-2">P.O. Box 12</td>
-                <td class="py-2">Lilongwe</td>
+                <th scope="row">3</th>
+                <td class="py-2">
+                    John Doe
+                </td>
+                <td class="py-2">jdoe@gmail.com</td>
+                <td class="py-2">1234567890</td>
                 <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
                 <td class="py-2">
                     <div class="flex-row d-flex">
                         <div class="p-1">
-                            <NavLink class="p-2 text-white rounded bg-warning">
-                                <i class="bi bi-eye-fill"></i>
+                            <NavLink class="p-2 text-white rounded bg-success">
+                                <i class="bi bi-pencil-square"></i>
                             </NavLink>
                         </div>
+                        <div class="p-1">
+                            <NavLink class="p-2 text-white rounded bg-danger">
+                                <i class="bi bi-trash"></i>
+                            </NavLink>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td class="py-2">
+                    John Doe
+                </td>
+                <td class="py-2">jdoe@gmail.com</td>
+                <td class="py-2">1234567890</td>
+                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                <td class="py-2">
+                    <div class="flex-row d-flex">
+                        <div class="p-1">
+                            <NavLink class="p-2 text-white rounded bg-success">
+                                <i class="bi bi-pencil-square"></i>
+                            </NavLink>
+                        </div>
+                        <div class="p-1">
+                            <NavLink class="p-2 text-white rounded bg-danger">
+                                <i class="bi bi-trash"></i>
+                            </NavLink>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td class="py-2">
+                    John Doe
+                </td>
+                <td class="py-2">jdoe@gmail.com</td>
+                <td class="py-2">1234567890</td>
+                <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
+                <td class="py-2">
+                    <div class="flex-row d-flex">
                         <div class="p-1">
                             <NavLink class="p-2 text-white rounded bg-success">
                                 <i class="bi bi-pencil-square"></i>
@@ -194,7 +240,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Proponet Location</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1"  placeholder="Enter Proponent Location." required>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Proponent Location." required>
                 </div>
             </div>
             <div class="modal-footer">

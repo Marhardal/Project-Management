@@ -1,13 +1,11 @@
-﻿@page "/Proponent/View"
+﻿@page "/Project/View"
 
-<PageTitle>MEPA | Proponent Details</PageTitle>
-
-
+<PageTitle>MEPA | Project Details</PageTitle>
 
 <div class="container">
     <div class="my-2 row">
         <div class="col-md-5">
-            <h3>Proponent Details</h3>
+            <h3>Project Details</h3>
         </div>
     </div>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -15,7 +13,7 @@
             <button class="nav-link active" id="details-tab" data-bs-toggle="tab" data-bs-target="#details-tab-pane" type="button" role="tab" aria-controls="details-tab-pane" aria-selected="true">Details</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">Projects</button>
+            <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="false">Timelines</button>
         </li>
         @* <li class="nav-item" role="presentation">
             <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
@@ -240,10 +238,10 @@
                         </nav>
                     </div>
                 </div>
-            </div>
+</div>
         </div>
         <div class="tab-pane fade" id="projects-tab-pane" role="tabpanel" aria-labelledby="projects-tab" tabindex="0">
-            <div class="mb-2 row px-2 pt-2">
+            @* <div class="mb-2 row px-2 pt-2">
                 <div class="col-md-3">
                     <h3>Proponent Projects</h3>
                 </div>
@@ -276,126 +274,88 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="border rounded bg-body-tertiary mb-2 mx-2 px-2">
-                <table class="table p-2 mt-2 rounded-pill table-hover">
-                    <thead class="text-white bg-dark">
-                        <tr class="">
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Proponent</th>
-                            <th scope="col">Location</th>
-                            <th scope="col">Submission</th>
-                            <th scope="col">Created On</th>
-                            <th scope="col" class="justify-content-center text-center">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td class="py-2">
-                                @TruncateToWords("Revised ESMP for Dumisan Borrow Pit in Kasungu District", 6)
-                            </td>
-                            <td class="py-2">Kasungu</td>
-                            <td class="py-2">Mota-Engil</td>
-                            <td class="py-2">2025-08-05</td>
-                            <td class="py-2">@DateTime.Now.AddMonths(-1)</td>
-                            <td class="py-2">
-                                <div class="flex-row d-flex justify-content-center">
-                                    <div class="p-1 jud">
-                                        <NavLink class="p-2 text-white rounded bg-warning">
-                                            <i class="bi bi-eye-fill"></i>
-                                        </NavLink>
-                                    </div>
-                                    @* <div class="p-1">
-                                        <NavLink class="p-2 text-white rounded bg-success">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </NavLink>
-                                    </div>
-                                    <div class="p-1">
-                                        <NavLink class="p-2 text-white rounded bg-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </NavLink>
-                                    </div> *@
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>
-                                @TruncateToWords("Revised ESMP for the proposed Kasitu Area exploration of Niobium,Tantalum, Uranium and Zircon T/A Kampingo Sibande in Mzuzu District", 6)
-                            </td>
-                            <td>Mzuzu</td>
-                            <td>MMC Limited</td>
-                            <td>2025-08-05</td>
-                            <td>@DateTime.Now.AddMonths(-2)</td>
-                            <td>
-                                <div class="flex-row d-flex">
-                                    <div class="p-1">
-                                        <NavLink class="p-2 text-white rounded bg-warning">
-                                            <i class="bi bi-eye-fill"></i>
-                                        </NavLink>
-                                    </div>
-                                    <div class="p-1">
-                                        <NavLink class="p-2 text-white rounded bg-success">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </NavLink>
-                                    </div>
-                                    <div class="p-1">
-                                        <NavLink class="p-2 text-white rounded bg-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </NavLink>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>
-                                @TruncateToWords("Revised ESMP for gold and heavy mineral sands in T/A Katunga, Chikwawa", 6)
-                            </td>
-                            <td>Chikwawa</td>
-                            <td>HDL Mining LTD </td>
-                            <td>2025-08-05</td>
-                            <td>@DateTime.Now.AddMonths(-3)</td>
-                            <td>
-                                <div class="flex-row d-flex">
-                                    <div class="p-1">
-                                        <NavLink class="p-2 text-white rounded bg-warning" href="/Projects/View">
-                                            <i class="bi bi-eye-fill"></i>
-                                        </NavLink>
-                                    </div>
-                                    <div class="p-1">
-                                        <NavLink class="p-2 text-white rounded bg-success">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </NavLink>
-                                    </div>
-                                    <div class="p-1">
-                                        <NavLink class="p-2 text-white rounded bg-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </NavLink>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="justify-content-center d-flex">
-                    <nav aria-label="...">
-                        <ul class="pagination">
-                            <li class="page-item"><a href="#" class="page-link">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#" aria-current="page">2</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
+            </div> *@
+            @* <div class="border rounded mb-2 mx-2 px-2"> *@
+                <div class="container py-4">
+    <h5 class="fw-semibold mb-4">Project Timelines</h5>
+
+    <div class="planning-timeline">
+
+        <div class="timeline-item pb-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="text-muted small mb-2">
+                    <i class="bi bi-calendar-event me-1"></i> 12 Oct 2023
+                    <span class="ms-2"><i class="bi bi-clock me-1"></i>10:30 AM</span>
+                </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <a href="#" class="fw-semibold text-decoration-none d-inline-block mb-3">
+                            Check up tooth
+                        </a>
+
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="text-muted small"><i class="bi bi-person-badge me-1"></i>Doctor</div>
+                                <div class="fw-medium">Drg. Dianne Rachel</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-muted small"><i class="bi bi-person me-1"></i>Assistant Doctor</div>
+                                <div class="fw-medium">Maria Kitty</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-muted small"><i class="bi bi-door-open me-1"></i>Room</div>
+                                <div class="fw-medium">Dental A12</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="timeline-item pb-2">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="text-muted small mb-2">
+                    <i class="bi bi-calendar-event me-1"></i> 12 Oct 2023
+                    <span class="ms-2"><i class="bi bi-clock me-1"></i>10:30 AM</span>
+                </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <a href="#" class="fw-semibold text-decoration-none d-inline-block mb-3">
+                            Prosthetic Tooth Fabrication
+                        </a>
+
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="text-muted small"><i class="bi bi-person-badge me-1"></i>Doctor</div>
+                                <div class="fw-medium">Drg. Dianne Rachel</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-muted small"><i class="bi bi-person me-1"></i>Assistant Doctor</div>
+                                <div class="fw-medium">Markonah Nicky</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-muted small"><i class="bi bi-door-open me-1"></i>Room</div>
+                                <div class="fw-medium">Labolatorium Tooth 1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+            @* </div> *@
 
         </div>
+        @* <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div> *@
     </div>
 </div>
 
@@ -427,6 +387,49 @@
         </div>
     </div>
 </div>
+
+<style>
+    .planning-timeline {
+        position: relative;
+        margin-left: 0.5rem;
+    }
+
+    .timeline-item {
+        position: relative;
+        padding-left: 2rem;
+    }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 0.47rem;
+            top: 0.9rem;
+            bottom: -0.5rem;
+            width: 2px;
+            background: #cfe2ff;
+        }
+
+        .timeline-item:last-child::before {
+            bottom: 1.5rem;
+        }
+
+    .timeline-dot {
+        position: absolute;
+        left: 0;
+        top: 0.7rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: #fff;
+        border: 2px solid #0d6efd;
+        box-shadow: 0 0 0 3px #e7f1ff;
+    }
+
+    .timeline-content .card {
+        border-radius: 0.5rem;
+    }
+
+</style>
 
 @code {
     private string TruncateToWords(string text, int wordLimit)

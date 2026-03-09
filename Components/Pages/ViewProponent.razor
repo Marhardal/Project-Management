@@ -24,27 +24,46 @@
             <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
         </li> *@
     </ul>
-    <div class="tab-content bg-white rounded-bottom  border-start border-end border-bottom mt--1" id="myTabContent">
+    <div class="tab-content bg-white border-start border-end border-bottom mt--1" id="myTabContent">
         <div class="tab-pane fade show active " id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
             <div class="mb-2 row px-2">
-                <div class="my-4 col-6">
-                    <div class="row">
-                        <span class="col-4">Name</span>
-                        <span class="col-8">Name</span>
+                <div class="px-2">
+                    <div class="my-2 row">
+                        <div class="col-md-12">
+                            <h5>Proponent Details</h5>
+                        </div>
+                        <div class="col-md-4 my-2">
+                            <div class="d-flex gap-4">
+                                <i class="bi bi-building-fill fs-5 me-2"></i>
+                                <div>
+                                    <h6 class="mb-1">Proponent Name</h6>
+                                    <div><span>Mota-Engil</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-2 border-start border-end">
+                            <div class="d-flex gap-4">
+                                @* <i class="bi bi-building-fill"></i> *@
+                                @* <i class="bi bi-geo-alt-fill fs-5 me-2"></i> *@
+                                <i class="bi bi-mailbox2-flag fs-5 me-2"></i>
+                                <div>
+                                    <h6 class="mb-1">Proponent Address</h6>
+                                    <div><span>Address</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 my-2">
+                            <div class="d-flex gap-4">
+                                @* <i class="bi bi-building-fill"></i> *@
+                                <i class="bi bi-geo-alt-fill fs-5 me-2"></i>
+                                <div>
+                                    <h6 class="mb-1">Proponent Location</h6>
+                                    <div><span>Location</span></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="my-4 col-6 border-start border-2">
-                    <div class="row">
-                        <span class="col-4">Location</span>
-                        <span class="col-8">Name</span>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="row">
-                        <span class="col-4">Postal Address</span>
-                        <span class="col-8">Name</span>
-                    </div>
-                </div>
             </div>
             <div class="border-top px-2">
                 <div class="my-2 row">
@@ -245,7 +264,7 @@
         <div class="tab-pane fade" id="projects-tab-pane" role="tabpanel" aria-labelledby="projects-tab" tabindex="0">
             <div class="mb-2 row px-2 pt-2">
                 <div class="col-md-3">
-                    <h3>Proponent Projects</h3>
+                    <h5>Proponent Projects</h5>
                 </div>
                 <div class="col-md-2">
                     <div class="mb-3 input-group rounded-pill">
@@ -303,7 +322,7 @@
                             <td class="py-2">
                                 <div class="flex-row d-flex justify-content-center">
                                     <div class="p-1 jud">
-                                        <NavLink class="p-2 text-white rounded bg-warning">
+                                        <NavLink class="p-2 text-white rounded bg-warning" href="Project/View">
                                             <i class="bi bi-eye-fill"></i>
                                         </NavLink>
                                     </div>
@@ -396,6 +415,10 @@
             </div>
 
         </div>
+    </div>
+    <div class="p-2 bg-white rounded-bottom border-start border-end border-bottom">
+        <NavLink class="btn btn-primary btn-sm" href="Projects">Back</NavLink>
+        @* <NavLink type="button" class="btn btn-secondary btn-sm" href="Proponent/view">Proponent</NavLink> *@
     </div>
 </div>
 

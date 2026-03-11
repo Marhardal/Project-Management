@@ -54,11 +54,8 @@
     </div>
     <div class="col-md-3 col-sm-6 col-lg-3">
         <div class="card">
-            <div class="row g-2">
-                <div class="mx-auto col-md-4 border-end align-content-between bg-success rounded-start-2">
-                    @* <img src="..." class="img-fluid rounded-start" alt="..."> *@
-                    @* <i class="bi bi-activity fs-1 "></i> *@
-                    @* <i class="bi bi-list fs-1"></i> *@
+            <div class="row">
+                <div class="mx-auto col-md-4 align-content-between justify-content-center border-end">
                     <i class="bi bi-clipboard2-pulse fs-1"></i>
                 </div>
                 <div class="col-md-8">
@@ -89,24 +86,134 @@
         </div>
     </div>
 </div>
-<div class="gap-2 my-2 row gap-lg-0">
+<div class="my-2 row">
     <div class="col-sm-8 ">
         <div class="card">
             <div class="card-header">
-                
+                <div class="row">
+                    <div class="col-8">
+                <div class="card-title">Projects Submitted per Month</div>
+                        @* <div class="card-title">Projects Status</div> *@
+                    </div>
+                    <div class="col-4 text-end">
+                        <NavLink class="">View</NavLink>
+                    </div>
+                </div>
             </div>
             <div class="card-body">
-                <canvas id="pie" width="400" height="400"></canvas>
+                <canvas id="pie" width="400" height="300"></canvas>
             </div>
         </div>
     </div>
     <div class="col-sm-4">
         <div class="card">
             <div class="card-header">
-                
+                <div class="row">
+                    <div class="col-8">
+                        <div class="card-title">Projects Status</div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <NavLink class="">View</NavLink>
+                    </div>
+                </div>
             </div>
             <div class="card-body">
-                <canvas id="pie" width="400" height="400"></canvas>
+                <canvas id="pie" width="400" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-2">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-8">
+                <div class="card-title">Projects by Proponent</div>
+                        @* <div class="card-title">Projects Status</div> *@
+                    </div>
+                    <div class="col-4 text-end">
+                        <NavLink class="btn btn-outline-primary">View</NavLink>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table p-2 rounded-pill table-hover">
+                    <thead class="text-white bg-dark">
+                        <tr class="">
+                            <th scope="col">#</th>
+                            <th scope="col">Proponent</th>
+                            <th scope="col">Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="py-2">Mota-Engil</td>
+                            <td class="py-2">20</td>
+                            </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>MMC Limited</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>HDL Mining LTD </td>
+                            <td>10
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+
+                @* <canvas id="pie" width="400" height="400"></canvas> *@
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8 mt-2">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-8">
+                <div class="card-title">Recent Projects</div>
+                        @* <div class="card-title">Projects Status</div> *@
+                    </div>
+                    <div class="col-4 text-end">
+                        <NavLink class="btn btn-outline-primary" href="/Projects">View</NavLink>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table p-2 rounded-pill table-hover">
+                    <thead class="text-white bg-dark">
+                        <tr class="">
+                            <th scope="col">#</th>
+                            <th scope="col">Project</th>
+                            <th scope="col">Proponent</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="py-2">Mota-Engil</td>
+                            <td class="py-2">Mota-Engil</td>
+                            <td class="py-2">@DateTime.Now</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>MMC Limited</td>
+                            <td>MMC Limited</td>
+                            <td>@DateTime.Now</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>HDL Mining LTD </td>
+                            <td>HDL Mining LTD </td>
+                            <td>@DateTime.Now</td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>

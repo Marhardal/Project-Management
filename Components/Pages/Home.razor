@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using ProjectManager.Components.Components
 
 <div class="flex-wrap pt-3 pb-2 mb-3 d-flex justify-content-between flex-md-nowrap align-items-center border-bottom">
     <h1 class="h2">Dashboard</h1>
@@ -22,7 +23,7 @@
 </div>
 <div class="gap-2 my-2 row gap-lg-0">   
     <div class="col-md-3 col-sm-6 col-lg-3">
-        <div class="card mb-sm-2 ">
+        @* <div class="card mb-sm-2 ">
             <div class="row g-2">
                 <div class="mx-auto col-md-3 col-sm-6 col-lg-3 border-end align-content-between">
                     <i class="bi bi-list fs-1"></i>
@@ -34,10 +35,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
+        <DashCard Icon="bi bi-list fs-1" Title="Total Projects" Info="500" />
     </div>
     <div class="col-md-3 col-sm-6 col-lg-3">
-        <div class="card">
+        <DashCard Icon="bi bi-clipboard2-minus fs-1" Title="Proponents" Info="10" />
+@*         <div class="card">
             <div class="row g-2">
                 <div class="mx-auto col-md-4 border-end bg-info rounded-start-2 d-flex justify-content-center align-items-center">
     <i class="bi bi-clipboard2-minus fs-1"></i>
@@ -45,15 +48,15 @@
 
                 <div class="col-md-8">
                     <div class="card-body">
-                        @* <h6 class="card-title">Pending Projects</h6> *@
+                         <h6 class="card-title">Pending Projects</h6> 
                         <p class="card-text">5 Projects still pending.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
     </div>
     <div class="col-md-3 col-sm-6 col-lg-3">
-        <div class="card">
+        @* <div class="card">
             <div class="row">
                 <div class="mx-auto col-md-4 align-content-between justify-content-center border-end">
                     <i class="bi bi-clipboard2-pulse fs-1"></i>
@@ -65,15 +68,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
+        <DashCard Icon="bi bi-clipboard2-pulse fs-1" Title="In Progress" Info="5" />
     </div>
     <div class="col-md-3 col-sm-6 col-lg-3">
-        <div class="card">
+        @* <div class="card">
             <div class="row g-2">
                 <div class="mx-auto col-md-4 border-end align-content-between">
-                    @* <img src="..." class="img-fluid rounded-start" alt="..."> *@
-                    @* <i class="bi bi-list fs-1"></i> *@
-                    @* <i class="bi bi-x-circle-fill fs-1"></i> *@
+                   
                     <i class="bi bi-clipboard2-x fs-1"></i>
                 </div>
                 <div class="col-md-8">
@@ -83,7 +85,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
+
+        <DashCard Icon="bi bi-clipboard2-pulse fs-1" Title="Completed" Info="5" />
     </div>
 </div>
 <div class="my-2 row">

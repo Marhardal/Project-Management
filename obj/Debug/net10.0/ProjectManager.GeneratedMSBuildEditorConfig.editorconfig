@@ -198,6 +198,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRzXERhc2hDYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/source/repos/Martin/ProjectManager/Components/Components/PieStatusChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRzXFBpZVN0YXR1c0NoYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/source/repos/Martin/ProjectManager/Components/Components/StackedChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRzXFN0YWNrZWRDaGFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/source/repos/Martin/ProjectManager/Components/Pages/Auth.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -232,10 +240,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/source/repos/Martin/ProjectManager/Components/Pages/Projects.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9qZWN0cy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Martin/ProjectManager/Components/Pages/Proponents.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9wb25lbnRzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/source/repos/Martin/ProjectManager/Components/Pages/Settings.razor]
@@ -285,3 +289,7 @@ build_metadata.AdditionalFiles.CssScope = b-v37ln7yvpw
 [C:/Users/user/source/repos/Martin/ProjectManager/Components/Layout/ReconnectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVjb25uZWN0TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rcz7fgy7ia
+
+[C:/Users/user/source/repos/Martin/ProjectManager/Components/Pages/Proponents.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9wb25lbnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-491wn5nfjj

@@ -240,3 +240,13 @@
         opacity: 0;
     }
 }
+/* /Components/Pages/Proponents.razor.rz.scp.css */
+.eye-hover-btn[b-491wn5nfjj] {
+    transition: all 0.2s ease;
+}
+
+.eye-hover-btn:hover[b-491wn5nfjj] {
+    background-color: #f59e0b !important; /* darker orange */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}

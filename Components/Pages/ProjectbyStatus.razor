@@ -1,4 +1,5 @@
 ﻿@page "/Project/Status"
+@using ProjectManager.Components.Components
 
 <div class="my-4 row">
     <div class="col-md-4">
@@ -41,7 +42,7 @@
                         <td class="py-2">20</td>
                         <td>
                             <div class="p-1 text-center">
-                                <NavLink class="p-2 rounded border-warning border bg-outline-warning text-warning" href="/Tracking">
+                                <NavLink class="rounded p-2 btn btn-outline-warning" href="/Tracking">
                                     <i class="bi bi-eye-fill"></i>
                                 </NavLink>
                             </div>
@@ -101,7 +102,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <canvas id="pie" width="400" height="300"></canvas>
+                <PieStatusChart/>
             </div>
         </div>
     </div>

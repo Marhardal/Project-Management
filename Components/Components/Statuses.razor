@@ -1,0 +1,129 @@
+﻿<div class="px-2 py-2 mb-2 row">
+    <div class="col-md-6">
+        <h5>Proponent Projects</h5>
+    </div>
+    <div class="col-md-6 text-end">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span class="pr-2"><i class="bi bi-plus-square"></i></span>&nbsp;Add</button>
+    </div>
+</div>
+<div class="border rounded bg-body-tertiary">
+    <table class="table table-hover">
+        <thead class="text-white bg-dark">
+            <tr class="">
+                <th scope="col">#</th>
+                <th scope="col">Status</th>
+                <th scope="col">Color</th>
+                <th scope="col">Created On</th>
+                <th scope="col">Updated On</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (allStatuses == null)
+            {
+                <tr>
+                    <td colspan="6" class="py-4 text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </td>
+                </tr>
+            }
+            else
+            {
+                @for (int i = 0; i < allStatuses.Count; i++)
+                {
+                    <tr>
+                        <th scope="row"><span class="d-flex align-items-center py-2">@i</span></th>
+                        <td class=""><span class="d-flex align-items-center py-2">@allStatuses[i].Name</span></td>
+                        <td class="">
+                            <div class="py-2 d-flex align-content-center">
+                                <span class="rounded border-success @allStatuses[i].Color" style="width: 20px; height: 20px; display: inline-block;"></span>
+                            </div>
+                        </td>
+                        <td class=""><span class="d-flex align-items-center py-2">@allStatuses[i].createdOn</span></td>
+                        <td class=""><span class="d-flex align-items-center py-2">@allStatuses[i].updatedOn</span></td>
+                        <td>
+                            <div class="text-end">
+                                <NavLink class="p-2 btn btn-outline-success">
+                                    <i class="bi bi-pencil-square"></i>
+                                </NavLink>
+                                <NavLink class="p-2 btn btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </NavLink>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Create Status</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Status Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Status Name." required>
+                </div>
+                <div class="">
+                    <label for="exampleFormControlInput1" class="form-label">Project Proponent</label>
+                    <div class="p-2 row">
+                        @foreach (var item in Colors)
+                        {
+                            <div class="col-auto mb-2">
+                                <StatusItem Name="@item.Name" Colour="@item.Class" />
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private List<Status>? allStatuses;
+
+    protected override async Task OnInitializedAsync()
+    {
+        allStatuses = await _context.Statuses.ToListAsync();
+    }
+
+    private List<ColorOption> Colors = new()
+    {
+        new ColorOption("Blue","bg-primary"),
+        new ColorOption("Green","bg-success"),
+        new ColorOption("Yellow","bg-warning"),
+        new ColorOption("Light Blue","bg-info"),
+        new ColorOption("Red","bg-danger"),
+        new ColorOption("Black","bg-dark"),
+        new ColorOption("Gray","bg-secondary"),
+        new ColorOption("White","bg-light")
+    };
+
+    public class ColorOption
+    {
+        public string Name { get; set; }
+        public string Class { get; set; }
+
+        public ColorOption(string name, string cssClass)
+        {
+            Name = name;
+            Class = cssClass;
+        }
+    }
+
+}

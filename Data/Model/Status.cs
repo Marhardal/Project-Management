@@ -8,6 +8,9 @@
 
         public string? Color { get; set; }
 
+        public DateTime createdOn { get; set; }
+        public DateTime updatedOn { get; set; }
+
         public TrackingModel? Tracking { get; set; }
         public ICollection<TrackingModel>? Trackings { get; set; }
 

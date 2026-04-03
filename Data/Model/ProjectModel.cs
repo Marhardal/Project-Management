@@ -14,4 +14,5 @@
         public Proponent? Proponent { get; set; }
         public TrackingModel? Tracking { get; set; }
     }
+
 }

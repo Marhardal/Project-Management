@@ -1,0 +1,39 @@
+﻿@page "/statuses"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ProjectManager.Data.Model
+@using ProjectManager.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<ProjectManager.Data.ApplicationDbContext> DbFactory
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<p>
+    <a href="statuses/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="context.Statuses">
+    <PropertyColumn Property="status => status.Name" />
+    <PropertyColumn Property="status => status.Color" />
+    <PropertyColumn Property="status => status.createdOn" />
+    <PropertyColumn Property="status => status.updatedOn" />
+
+    <TemplateColumn Context="status">
+        <a href="@($"statuses/edit?id={status.ID}")">Edit</a> |
+        <a href="@($"statuses/details?id={status.ID}")">Details</a> |
+        <a href="@($"statuses/delete?id={status.ID}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private ApplicationDbContext context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

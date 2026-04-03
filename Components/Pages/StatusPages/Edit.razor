@@ -1,0 +1,104 @@
+﻿@page "/statuses/edit"
+@using Microsoft.EntityFrameworkCore
+@using ProjectManager.Data.Model
+@inject IDbContextFactory<ProjectManager.Data.ApplicationDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Edit</PageTitle>
+
+<h1>Edit</h1>
+
+<h2>Status</h2>
+<hr />
+@if (Status is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm method="post" Model="Status" OnValidSubmit="UpdateStatus" FormName="edit" Enhance>
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert"/>
+                <input type="hidden" name="Status.ID" value="@Status.ID" />
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <InputText id="name" @bind-Value="Status.Name" class="form-control" />
+                    <ValidationMessage For="() => Status.Name" class="text-danger" />
+                </div>
+                <div class="mb-3">
+                    <label for="color" class="form-label">Color:</label>
+                    <InputText id="color" @bind-Value="Status.Color" class="form-control" />
+                    <ValidationMessage For="() => Status.Color" class="text-danger" />
+                </div>
+                <div class="mb-3">
+                    <label for="createdon" class="form-label">createdOn:</label>
+                    <InputDate id="createdon" @bind-Value="Status.createdOn" class="form-control" />
+                    <ValidationMessage For="() => Status.createdOn" class="text-danger" />
+                </div>
+                <div class="mb-3">
+                    <label for="updatedon" class="form-label">updatedOn:</label>
+                    <InputDate id="updatedon" @bind-Value="Status.updatedOn" class="form-control" />
+                    <ValidationMessage For="() => Status.updatedOn" class="text-danger" />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="/statuses">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private Guid ID { get; set; }
+
+    [SupplyParameterFromForm]
+    private Status? Status { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Status ??= await context.Statuses.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Status is null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more information, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task UpdateStatus()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(Status!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!StatusExists(Status!.ID))
+            {
+                NavigationManager.NotFound();
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/statuses");
+    }
+
+    private bool StatusExists(Guid id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Statuses.Any(e => e.ID == id);
+    }
+}

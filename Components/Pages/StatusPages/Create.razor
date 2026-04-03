@@ -1,0 +1,61 @@
+﻿@page "/statuses/create"
+@using Microsoft.EntityFrameworkCore
+@using ProjectManager.Data.Model
+@inject IDbContextFactory<ProjectManager.Data.ApplicationDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Create</PageTitle>
+
+<h1>Create</h1>
+
+<h2>Status</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Status" OnValidSubmit="AddStatus" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label> 
+                <InputText id="name" @bind-Value="Status.Name" class="form-control" /> 
+                <ValidationMessage For="() => Status.Name" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="color" class="form-label">Color:</label> 
+                <InputText id="color" @bind-Value="Status.Color" class="form-control" /> 
+                <ValidationMessage For="() => Status.Color" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="createdon" class="form-label">createdOn:</label> 
+                <InputDate id="createdon" @bind-Value="Status.createdOn" class="form-control" /> 
+                <ValidationMessage For="() => Status.createdOn" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="updatedon" class="form-label">updatedOn:</label> 
+                <InputDate id="updatedon" @bind-Value="Status.updatedOn" class="form-control" /> 
+                <ValidationMessage For="() => Status.updatedOn" class="text-danger" /> 
+            </div>        
+            <button type="submit" class="btn btn-primary">Create</button>
+        </EditForm>
+    </div>
+</div>
+
+<div>
+    <a href="/statuses">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private Status Status { get; set; } = default!;
+
+    protected override void OnInitialized() => Status ??= new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddStatus()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Statuses.Add(Status);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/statuses");
+    }
+}

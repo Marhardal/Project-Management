@@ -43,6 +43,8 @@ namespace ProjectManager.Data
         private void UpdateTimestamps()
         {
             var now = DateTime.Now;
+            
+            // ContactPerson
             foreach (var entry in ChangeTracker.Entries<ContactPerson>())
             {
                 if (entry.State == EntityState.Modified)
@@ -52,6 +54,20 @@ namespace ProjectManager.Data
                 else if (entry.State == EntityState.Added)
                 {
                     entry.Entity.createdOn = now;
+                }
+            }
+            
+            // Status
+            foreach (var entry in ChangeTracker.Entries<Status>())
+            {
+                if (entry.State == EntityState.Modified)
+                {
+                    entry.Entity.updatedOn = now;
+                }
+                else if (entry.State == EntityState.Added)
+                {
+                    entry.Entity.createdOn = now;
+                    entry.Entity.updatedOn = now;
                 }
             }
         }

@@ -1,0 +1,52 @@
+﻿@page "/statuses/details"
+@using Microsoft.EntityFrameworkCore
+@using ProjectManager.Data.Model
+@inject IDbContextFactory<ProjectManager.Data.ApplicationDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Details</PageTitle>
+
+<h1>Details</h1>
+
+<div>
+    <h2>Status</h2>
+    <hr />
+    @if (status is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Name</dt>
+            <dd class="col-sm-10">@status.Name</dd>
+            <dt class="col-sm-2">Color</dt>
+            <dd class="col-sm-10">@status.Color</dd>
+            <dt class="col-sm-2">createdOn</dt>
+            <dd class="col-sm-10">@status.createdOn</dd>
+            <dt class="col-sm-2">updatedOn</dt>
+            <dd class="col-sm-10">@status.updatedOn</dd>
+        </dl>
+        <div>
+            <a href="@($"/statuses/edit?id={status.ID}")">Edit</a> |
+            <a href="@($"/statuses")">Back to List</a>
+        </div>
+    }
+</div>
+
+@code {
+    private Status? status;
+
+    [SupplyParameterFromQuery]
+    private Guid ID { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        status = await context.Statuses.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (status is null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+}

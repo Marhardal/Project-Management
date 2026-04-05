@@ -96,26 +96,35 @@
                     </NavLink>
                 </li>
                 <li class="nav-item">
+                    <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Proposals">
+                        @* <svg class="bi" aria-hidden="true">
+                            <use xlink:href="#file-earmark"></use>
+                        </svg> *@
+                        <i class="bi bi-book-half fs-6 text-black"></i>
+                        Proposal
+                    </NavLink>
+                </li>
+                <li class="nav-item">
                     <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Projects">
-                        <svg class="bi" aria-hidden="true">
-                            <use xlink:href="#cart"></use>
-                        </svg>
-                        Projects
+                        <i class="bi bi-book-fill fs-6 text-black"></i>
+                        <span class="me-1">Projects</span>
                     </NavLink>
                 </li>
                 <li class="nav-item">
                     <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Users">
-                        <svg class="bi" aria-hidden="true">
+                        @* <svg class="bi" aria-hidden="true">
                             <use xlink:href="#people"></use>
-                        </svg>
+                        </svg> *@
+                        <i class="bi bi-people-fill fs-6 text-black"></i>
                         Users
                     </NavLink>
                 </li>
                 <li class="nav-item">
                     <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Roles">
-                        <svg class="bi" aria-hidden="true">
+                        @* <svg class="bi" aria-hidden="true">
                             <use xlink:href="#puzzle"></use>
-                        </svg>
+                        </svg> *@
+                        <i class="bi bi-shield-lock-fill fs-6 text-black"></i>
                         Roles
                     </NavLink>
                 </li>
@@ -132,33 +141,31 @@
             <ul class="mb-auto nav flex-column">
                 <li class="nav-item">
                     <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Tracking">
-                        <svg class="bi" aria-hidden="true">
-                            <use xlink:href="#graph-up"></use>
-                        </svg>
+                        <i class="bi bi-bar-chart-line-fill fs-6 text-black"></i>
                         Tracking
                     </NavLink>
                 </li>
             <li class="nav-item">
                     <NavLink class="gap-2 nav-link d-flex align-items-center" href="Month/Project">
-                    <svg class="bi" aria-hidden="true">
-                        <use xlink:href="#file-earmark-text"></use>
-                    </svg>
+                        <i class="bi bi-calendar2-check-fill fs-6 text-black"></i>
                         Projects per Month
                 </NavLink>
             </li>
             <li class="nav-item">
                     <NavLink class="gap-2 nav-link d-flex align-items-center" href="/Proponent/Projects">
-                    <svg class="bi" aria-hidden="true">
+                    @* <svg class="bi" aria-hidden="true">
                         <use xlink:href="#file-earmark-text"></use>
-                    </svg>
+                    </svg> *@
+                        <i class="bi bi-diagram-3-fill fs-6 text-black"></i>
                         Projects by Proponent
                 </NavLink>
             </li>
             <li class="nav-item">
                     <NavLink class="gap-2 nav-link d-flex align-items-center" href="Project/Status">
-                    <svg class="bi" aria-hidden="true">
+                    @* <svg class="bi" aria-hidden="true">
                         <use xlink:href="#file-earmark-text"></use>
-                    </svg>
+                    </svg> *@
+                        <i class="bi bi-pie-chart-fill fs-6 text-black"></i>
                         Projects Status
                 </NavLink>
             </li>
@@ -194,9 +201,7 @@
                     <AntiforgeryToken />
                     <input type="hidden" name="ReturnUrl" value="@currentUrl" />
                     <button type="submit" class="gap-2 nav-link d-flex align-items-center">
-                        <svg class="bi" aria-hidden="true">
-                            <use xlink:href="#door-closed"></use>
-                        </svg>
+                        <i class="bi bi-door-closed-fill text-black fs-6"></i>
                         Logout
                     </button>
                 </form>

@@ -1,7 +1,7 @@
 ﻿@page "/Tracking"
 
-<div class="my-4 row">
-    <div class="col-md-3">
+<div class="row">
+    <div class="col-md-8">
         <h3>Tracking</h3>
     </div>
     <div class="col-md-2">
@@ -16,12 +16,6 @@
             </select>
         </div>
     </div>
-    <div class="col-md-5">
-        <div class="mb-3 input-group">
-            <span class="input-group-text" id="basic-addon1">Search</span>
-            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-    </div>
     <div class="col-md-2 text-end">
         <div class="dropdown-center">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,6 +25,38 @@
                 <li><a class="dropdown-item" href="#">PDF</a></li>
                 <li><a class="dropdown-item" href="#">Excel</a></li>
             </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="mb-3 input-group">
+            <span class="input-group-text" id="basic-addon1">Search</span>
+            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mb-3 input-group">
+            <label class="input-group-text" for="inputGroupSelect01">Type</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option selected>Proposal</option>
+                <option value="0">ESMP</option>
+                <option value="1">Audit</option>
+                <option value="2">ESIA</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mb-3 input-group">
+            <label class="input-group-text" for="inputGroupSelect01">Status</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                @* @foreach (var status in Statuses)
+                {
+                    <option value="@status.ID">@status.Name</option>
+                } *@
+            </select>
         </div>
     </div>
 </div>
